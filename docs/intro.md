@@ -2,46 +2,20 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Why spinach
+I made spinach cause I the other quantum languages are not shaped like quantum comupting is.
+The best forme is using python to describe circuits using tket and else. While python do the job quantum comupting still feels like a second class citisen with it cause it is.
+Spinach's force is it's front end being shaped thinking about quantum computing.
+A good example is the concept of a pipeline in Spinach. A function is code reusability. It's really usefull in classical computing but in quantum computing it feels odd. The reason is quantum has it's own problems that needs it's own features. The equivalent of a function with Spinach is a pipeline. It takes a qubit and passe it to different gates. The main difference is, a pipeline can be reversed. A lot of algorithms in quantum computing involves reversing effects by passing the qubit in the same gates again.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Spinach code is compatible with every quantum computers by compiling into their languages.
+It can also be simulated with all the simulation libraries of python for the fact that, it is python under the hood.
 
-## Getting Started
+# Documentation index
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- [Introduction](intro.md)
+- [Setup](setup.md)
+- [Declarations](declarations.md)
+- [Pipeline and Gates](running.md)
+- [Actions](actions.md)
+- [Conclusion](conclusion.md)
