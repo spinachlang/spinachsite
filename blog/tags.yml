@@ -19,7 +19,7 @@ hola:
   description: Hola tag description
 
 spinachlang:
-  label: Apinachlang
+  label: Spinach Lang
   permalink: /spinachlang
   description: the spinach language
 
