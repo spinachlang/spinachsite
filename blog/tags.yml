@@ -17,3 +17,18 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+spinachlang:
+  label: Apinachlang
+  permalink: /spinachlang
+  description: the spinach language
+
+quantum-computing:
+  label: Quantum Computing
+  permalink: /quantum-computing
+  description: quantum-computing
+
+open-source:
+  label: Open Source
+  permalink: /open-source
+  description: open-source
