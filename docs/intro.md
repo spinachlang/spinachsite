@@ -16,6 +16,6 @@ It can also be simulated with all the simulation libraries of python for the fac
 - [Introduction](intro.md)
 - [Setup](setup.md)
 - [Declarations](declarations.md)
-- [Pipeline and Gates](running.md)
+- [Pipeline and Gates](pipeline.md)
 - [Actions](actions.md)
 - [Conclusion](conclusion.md)
