@@ -20,8 +20,10 @@
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
+    "raw-loader": "^4.0.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "viz.js": "^2.1.2"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.1",

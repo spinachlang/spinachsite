@@ -1,0 +1,20 @@
+digraph spinach {
+    node [shape=rectangle];
+
+    e [label="lark grammar"]
+    f [label="code"]
+    a [label="frontend"]
+    b [label="ast builder"]
+    c [label="transformer: qubit and bit cout"]
+    d [label="transformer: circuit"]
+    g [label="tket circuit"]
+
+    f -> a;
+    e -> a;
+    a -> b [label="concrete Syntax Tree"];
+    b -> c [label="abstract syntax tree"];
+    c -> g;
+    b -> d [label="abstract syntax tree"];
+    d -> g;
+}
+

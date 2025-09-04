@@ -28,9 +28,6 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr'],
@@ -49,7 +46,6 @@ const config: Config = {
             type: 'all',
             xslt: true,
           },
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -60,77 +56,26 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  plugins: [
+    function dotLoaderPlugin() {
+      return {
+        name: 'dot-loader',
+        configureWebpack() {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /\.dot$/,
+                  use: 'raw-loader',
+                },
+              ],
+            },
+          };
+        },
+      };
+    },
+  ],
 
-  themeConfig: {
-    // Replace with your project's social card
-    image: 'img/spinach-social-card.jpg',
-    navbar: {
-      title: 'Spinach Lang',
-      logo: {
-        alt: 'Spinach Lang Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Documentation',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://github.com/spinachlang/spinachlang',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Documentation',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/spinachlang',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/WypGPaDc7z',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/spinachlang/spinachlang',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Spinach lang, Inc. Built with Docusaurus.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
-};
-
+}
 export default config;
+
