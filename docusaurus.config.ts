@@ -18,10 +18,9 @@ const config: Config = {
   url: 'https://spinachlang.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/spinachsite',
+  baseUrl: '/spinachsite/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'spinachlang', // Usually your GitHub org/user name.
   projectName: 'spinachlang', // Usually your repo name.
 
@@ -56,6 +55,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
   plugins: [
     function dotLoaderPlugin() {
       return {
@@ -76,6 +76,79 @@ const config: Config = {
     },
   ],
 
-}
+  themeConfig: {
+    image: 'img/spinach-social-card.jpg',
+
+    navbar: {
+      title: 'Spinach Lang',
+      logo: {
+        alt: 'Spinach Lang Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Documentation',
+        },
+        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://github.com/spinachlang/spinachlang',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Documentation',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/spinachlang',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/WypGPaDc7z',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/spinachlang/spinachlang',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Spinach Lang, Inc. Built with Docusaurus.`,
+    },
+
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  } satisfies Preset.ThemeConfig,
+};
+
 export default config;
 
