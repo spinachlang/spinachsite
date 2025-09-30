@@ -13,7 +13,7 @@ digraph spinach {
     e -> a;
     a -> b [label="concrete Syntax Tree"];
     b -> c [label="abstract syntax tree"];
-    c -> g[label="tket circuit"];
-    c -> h;[label="tket circuit"];
+    c -> g [label="tket circuit"];
+    c -> h [label="tket circuit"];
 }
 
