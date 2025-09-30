@@ -7,10 +7,6 @@ import graph from './graph.dot?raw'; // vite/webpack raw loader
 # how does it work?
 This is a description of the compiler's flow.
 <DotRenderer dot={graph} />
-- The frontend parse the code using the grammar and create a CST.
-- The CST is used to create an AST using the classes defined.
-- The AST is used to create two transformers, one to check the maximum number of a qubit and a bit to initialise the circuit, the other to create the rest of the circuit.
-- Both transformers are used to create the final tket circuit.
 
 A tket circuit is extreamely versatile. From there we can compile to anything or even start simulations.
 

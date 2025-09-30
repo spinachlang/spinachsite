@@ -14,3 +14,7 @@ my_qubit -> my_pipeline
 1 -> H | CX(2)
 ```
 
+We can also use "*" to execute and action on all qubit used so far.
+```
+* -> H
+```

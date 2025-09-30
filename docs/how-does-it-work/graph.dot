@@ -3,18 +3,17 @@ digraph spinach {
 
     e [label="lark grammar"]
     f [label="code"]
-    a [label="frontend"]
+    a [label="parser"]
     b [label="ast builder"]
-    c [label="transformer: qubit and bit cout"]
-    d [label="transformer: circuit"]
-    g [label="tket circuit"]
+    c [label="tket circuit builder"]
+    g [label="other quantum languages"]
+    h [label="simulation and other representations"]
 
     f -> a;
     e -> a;
     a -> b [label="concrete Syntax Tree"];
     b -> c [label="abstract syntax tree"];
-    c -> g;
-    b -> d [label="abstract syntax tree"];
-    d -> g;
+    c -> g;[label="tket circuit"]
+    c -> g;[label="tket circuit"]
 }
 
